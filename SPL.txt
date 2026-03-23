@@ -1,0 +1,1 @@
+source="employees.csv" host="employees" index="employees_ndex" sourcetype="csv" | eval full_name = first_name+" "+last_name | eval gendertype=case(gender="M","MALE",gender="F","FEMALE") | table first_name last_name full_name gendertype
