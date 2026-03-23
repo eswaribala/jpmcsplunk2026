@@ -1,3 +1,5 @@
 source="employees.csv" host="employees" index="employees_ndex" sourcetype="csv" | eval full_name = first_name+" "+last_name | eval gendertype=case(gender="M","MALE",gender="F","FEMALE") | table first_name last_name full_name gendertype
 
 source="employees.csv" host="employees" index="employees_ndex" sourcetype="csv" | eval hiredate=strptime(hire_date,"%Y-%m-%d") | eval currentdate=now()| eval experience=round(((currentdate-hiredate)/86400)/365) | table first_name hire_date experience
+
+source="employees.csv" host="employees" index="employees_ndex" sourcetype="csv" | eval hiredate=strptime(hire_date,"%Y-%m-%d") | eval currentdate=strptime("1987-01-01","%Y-%m-%d")| where hiredate < currentdate | table first_name hire_date
