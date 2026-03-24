@@ -1,0 +1,4 @@
+{"timestamp":"2026-03-23T10:00:01","level":"INFO","service":"UserService","message":"User login","userId":101}
+{"timestamp":"2026-03-23T10:01:12","level":"WARN","service":"PaymentService","message":"Retry payment","orderId":5001}
+{"timestamp":"2026-03-23T10:02:45","level":"ERROR","service":"PaymentService","message":"Payment failed","orderId":5001}
+{"timestamp":"2026-03-23T10:03:10","level":"INFO","service":"OrderService","message":"Order placed","orderId":5002}
